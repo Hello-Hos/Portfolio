@@ -88,7 +88,7 @@ nav{
     display: flex;
     justify-content: space-between;
     width: 100%;
-    height: 90px;
+    height: 100px;
     line-height: 90px;
     background: var(--body-color);
     padding-inline: 9vw;
@@ -104,7 +104,7 @@ nav{
     color: rgb(24, 118, 158);
 }
 .nav-logo span{
-    position: absolute;
+    position: fixed;
     top: -15px;
     right: -20px;
     font-size: 5em;
@@ -158,7 +158,7 @@ nav{
 .featured-box{
     position: relative;
     display: flex;
-    height: 100vh;
+    height: 80vh;
     min-height: 700px;
 }
 
@@ -539,6 +539,9 @@ footer{
         width: 320px;
         height: 320px;
     }
+    html, body {
+        overflow-x: hidden;
+    }
 }
 
 /* ----- MEDIA QUERY == 900px / RESPONSIVE NAVIGATIONBAR ----- */
@@ -617,6 +620,9 @@ footer{
     .project-box{
         width: 80%;
     }
+    html, body {
+        overflow-x: hidden;
+    }
 
 }
 
@@ -624,15 +630,83 @@ footer{
 
 @media only screen and (max-width: 540px){
     .featured-name{
-        font-size: 40px;
+        font-size: 32px;
+    }
+    html, body {
+        overflow-x: hidden;
     }
     .project-box{
-        width: 100%;
+        width: 70%;
     }
     .form-inputs{
         flex-direction: column;
     }
     .input-field{
         width: 100%;
+    }
+    .contact-info{
+        width: 85%;
+    }
+    .form-control{
+        width: 85%;
+    }
+    .about-info li {
+        margin-left: 15px;
+    }
+    .about-info .btn{
+        margin-right: 105px;
+    }
+    .nav-name{
+        font-size: 1.5rem;
+    }
+    .nav-menu-btn i {
+        /* margin-right: 3rem; */
+        width: 100%;
+    }
+    .scroll-btn {
+        position:absolute;
+        display: none;
+    }
+    .top-header h1 {
+        font-weight: 600;
+        color: var(--text-color-second);
+        margin-bottom: 1px;
+    }
+    .featured-text-card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center; 
+    }
+    
+    .featured-text-card span {
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+        border-radius: 5px;
+        padding: 10px; 
+        width: fit-content;
+    }
+    
+    .wrapper {
+        padding-inline: 10vw;
+    }
+    .featured-image {
+        width: 100%;
+        display:flex;
+        justify-content:center;
+        align-content:center;
+        margin-top: 200px;
+    }
+    .typedText {
+        font-size: 30px;
+    }
+    .featured-text {
+        width: 100%;
+        order: 2;
+        justify-content: center;
+        align-content: flex-start;
+        min-height: 80vh;
     }
 }
